@@ -85,7 +85,7 @@
   <project name="jgcaaprom/android_external_webp" path="external/webp" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_libcxx" path="external/libcxx" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_iputils" path="external/iputils" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/x86_64-linux-glibc-2.20-4.8" path="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" remote="gh" revision="master" />
+  <project name="jgcaaprom/x86_64_linux_glibc_2.20_4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" remote="gh" revision="master" />
 
 
 
