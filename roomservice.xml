@@ -40,7 +40,7 @@
   <remove-project name="CyanogenMod/android_packages_apps_Settings" />
   <remove-project name="CyanogenMod/android_bootable_recovery" />
   <remove-project name="CyanogenMod/android_packages_apps_Camera2" />
-
+  <remove-project name="CyanogenMod/android_libcore" />
 
 <!-- Repo Replacements CyanogenMod -->
   <project name="jgcaaprom/android_vendor_cm" path="vendor/cm" remote="gh" revision="cm-12.1" />
@@ -64,6 +64,7 @@
   <project name="jgcaaprom/android_external_dhcpcd" path="external/dhcpcd" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_chromium_org" path="external/chromium_org" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-12.1" />
+  <project name="jgcaaprom/android_libcore" path="libcore" remote="gh" revision="cm-12.1" />
 
 
 <!-- Repo Removes Platform -->
