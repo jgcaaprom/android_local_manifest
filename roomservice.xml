@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-
-<!-- Remotes -->
-  <remote fetch="git://github.com/" name="gh" />
+  
+  <!-- Remotes -->
+  
+    <remote fetch="git://github.com/" name="gh" />
   <remote fetch="https://bitbucket.org/" name="bb" />
-
-
-<!-- One Plus One Bacon  -->
+  
+  <!-- One Plus One Bacon  -->
+  
   <project name="CyanogenMod/android_device_oneplus_bacon" path="device/oneplus/bacon" revision="cm-12.1" />
   <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="gh" revision="cm-12.1" />
   <project name="CyanogenMod/android_device_oppo_msm8974-common" path="device/oppo/msm8974-common" remote="gh" revision="cm-12.1" />
   <project name="CyanogenMod/android_device_oppo_common" path="device/oppo/common" remote="gh" revision="cm-12.1" />
   <project name="CyanogenMod/android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="gh" revision="cm-12.1" />
+  
+  <!-- One Plus One Bacon Remove -->
+  
+  <remove-project name="CyanogenMod/android_device_oneplus_bacon" />
+  <remove-project name="CyanogenMod/android_device_oppo_msm8974-common" />
+  <remove-project name="CyanogenMod/android_kernel_oneplus_msm8974" />
+  
+  <!-- One Plus One Bacon Replacement -->
+  
+  <project name="jgcaaprom/android_device_oneplus_bacon" path="device/oneplus/bacon" revision="cm-12.1" />
+  <project name="jgcaaprom/android_device_oppo_msm8974-common" path="device/oppo/msm8974-common" remote="gh" revision="cm-12.1" />
+  <project name="jgcaaprom/android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="gh" revision="cm-12.1" />
+
+  <!-- One Plus One Bacon Vendor Remove -->
+  
+  <remove-project name="TheMuppets/proprietary_vendor_oneplus" />
+  <remove-project name="TheMuppets/proprietary_vendor_oppo" />
+  
+  <!-- One Plus One Bacon Vendor Replacement -->
+  
   <project name="TheMuppets/proprietary_vendor_oppo" path="vendor/oppo" remote="gh" revision="cm-12.1" />
   <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="gh" revision="cm-12.1" />
-
-
-<!-- Repo Removes CyanogenMod -->
+  
+  <!-- Repo Removes CyanogenMod -->
+  
   <remove-project name="CyanogenMod/android_vendor_cm" />
   <remove-project name="CyanogenMod/android_build" />
   <remove-project name="CyanogenMod/android_art" />
@@ -36,13 +56,12 @@
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
   <remove-project name="CyanogenMod/android_external_speex" />
   <remove-project name="CyanogenMod/android_external_dnsmasq" />
-  <remove-project name="CyanogenMod/android_external_skia" />
   <remove-project name="CyanogenMod/android_packages_apps_Settings" />
-  <remove-project name="CyanogenMod/android_bootable_recovery" />
   <remove-project name="CyanogenMod/android_packages_apps_Camera2" />
   <remove-project name="CyanogenMod/android_libcore" />
-
-<!-- Repo Replacements CyanogenMod -->
+  
+  <!-- Repo Replacements CyanogenMod -->
+  
   <project name="jgcaaprom/android_vendor_cm" path="vendor/cm" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_build" path="build" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_art" path="art" remote="gh" revision="cm-12.1" />
@@ -55,7 +74,6 @@
   <project name="jgcaaprom/android_system_core" path="system/core" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_system_extras" path="system/extras" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_external_skia" path="external/skia" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_packages_apps_Settings" path="packages/apps/Settings" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_dnsmasq" path="external/dnsmasq" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_speex" path="external/speex" remote="gh" revision="cm-12.1" />
@@ -63,49 +81,34 @@
   <project name="jgcaaprom/android_external_libpng" path="external/libpng" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_dhcpcd" path="external/dhcpcd" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_chromium_org" path="external/chromium_org" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_bootable_recovery" path="bootable/recovery" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_libcore" path="libcore" remote="gh" revision="cm-12.1" />
-
-
-<!-- Repo Removes Platform -->
+  
+  <!-- Repo Removes Platform -->
+  
   <remove-project name="platform/external/stlport" />
   <remove-project name="platform/external/webp" />
-  <remove-project name="platform/prebuilts/ndk" />
   <remove-project name="platform/external/chromium_org/third_party/WebKit" />
-  <remove-project name="platform/external/chromium-libpac" />
   <remove-project name="platform/external/iputils" />
-  <remove-project name="platform/external/libcxx" />
   <remove-project name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" />
-
-<!-- Repo Replacements Platform -->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" />
+  <remove-project name="platform/ndk" />
+  
+  <!-- Repo Replacements Platform -->
+  
+  <project name="jgcaaprom/platform_ndk" path="ndk" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_stlport" path="external/stlport" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_external_chromium-libpac" path="external/chromium-libpac" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_prebuilt_ndk" path="prebuilts/ndk" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_chromium_org_third_party_WebKit" path="external/chromium_org/third_party/WebKit" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_webp" path="external/webp" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_external_libcxx" path="external/libcxx" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/android_external_iputils" path="external/iputils" remote="gh" revision="cm-12.1" />
   <project name="jgcaaprom/x86_64_linux_glibc_2.20_4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" remote="gh" revision="master" />
+  <project name="UBERTC/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="bb" revision="master" />
+  <project name="UBERTC/arm-linux-androideabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" remote="bb" revision="master" />
+  
+  <!-- New Repo -->
 
-
-
-
-<!-- Repo Removes RoomService -->
-  <remove-project name="CyanogenMod/android_device_oneplus_bacon" />
-  <remove-project name="CyanogenMod/android_device_oppo_msm8974-common" />
-  <remove-project name="CyanogenMod/android_kernel_oneplus_msm8974" />
-
-
-<!-- Replacements RoomService -->
-  <project name="jgcaaprom/android_device_oneplus_bacon" path="device/oneplus/bacon" revision="cm-12.1" />
-  <project name="jgcaaprom/android_device_oppo_msm8974-common" path="device/oppo/msm8974-common" remote="gh" revision="cm-12.1" />
-  <project name="jgcaaprom/android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="gh" revision="stable2" />
-
-
-<!-- New Repo -->
-  <project name="UBERTC/arm-eabi-5.1" path="prebuilts/gcc/linux-x86/arm/arm-eabi-5.1" remote="bb" revision="master" />
-  <project name="UBERTC/arm-linux-androideabi-5.1" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-5.1" remote="bb" revision="master" />
+  <project name="jgcaap/arm-eabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.9" remote="bb" revision="master" />
+  <project name="jgcaap/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" remote="bb" revision="master" />
   <project name="jgcaaprom/CameraNext" path="packages/apps/CameraNext" remote="gh" revision="cm-12.1" />
-
-
+  
 </manifest>
