@@ -1,0 +1,1 @@
+This is local manifest of ROM based on CyanogenMod 13.0. You'll need to add local_manifests.xml to .repo/local_manifests/ in order to be able to use my ROM source. This was mainly optimized for bacon where I could not recomend in using the whole manifest for different devices.
